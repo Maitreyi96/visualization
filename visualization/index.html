@@ -195,12 +195,12 @@ var yAxisLeft = d3.svg.axis().scale(y0).ticks(4).orient("left");
 // create right yAxis
 var yAxisRight = d3.svg.axis().scale(y1).ticks(4).orient("right");
 
-var chart2 = d3.select("body").append("svg")
+/*var chart2 = d3.select("body").append("svg")
     .attr("width", w2+ margin1.left + margin1.right)
     .attr("height", 2*h2 + margin1.top + margin1.bottom)
   .append("g")
     .attr("class", "graph")
-    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+    .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");*/
 
 
 
@@ -530,13 +530,13 @@ function type(d) {
             })
         .on("click",function(d, i){
 
-        	chart2.selectAll().remove();
+ /*       	chart2.selectAll().remove();
         	chart2.selectAll("g").remove();
 
    			chart2.selectAll(".bar").remove();
    			 chart2.selectAll("rect").remove();
    			chart2.selectAll("text.bar").remove();
-   			chart2.selectAll("text").remove();
+   			chart2.selectAll("text").remove();*/
 
 
 
@@ -670,7 +670,7 @@ x1.domain(overall.map(function(d) { return d.age1+ "-"+ d.age2; }));
   	if(d.male>d.female)
   	{return d.male;}else{return d.female;} })]);
 
-  chart2.append("g")
+/*  chart2.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + h2 + ")")
       .call(xAxis1)
@@ -678,11 +678,11 @@ x1.domain(overall.map(function(d) { return d.age1+ "-"+ d.age2; }));
     .attr("x", 6)
     .attr("dx", "38em")
     .style("text-anchor", "begin")
-    .text("Age");
+    .text("Age");*/
 
   var illustrator1 = [{name:"Deaths Male-Female",x:50,y:275}]
 
-    chart2.append("g").selectAll(".place-label")
+/*    chart2.append("g").selectAll(".place-label")
           .data(illustrator1)
           .enter().append("text")
           .attr("class", "place-label")
@@ -759,7 +759,7 @@ x1.domain(overall.map(function(d) { return d.age1+ "-"+ d.age2; }));
 			   })
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "11px")
-			   .attr("fill", "gray");
+			   .attr("fill", "gray");*/
 
 });
 
